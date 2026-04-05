@@ -1,33 +1,40 @@
-SafeNest – Smart Home IoT System
-Description
+# SafeNest – Smart Home IoT System 🏠
 
-SafeNest is a smart home IoT system that allows users to monitor environmental data and control home devices remotely using a mobile application and a backend server.
+SafeNest is a full-stack smart home automation system developed during a summer internship at Alfa Computers & Consulting (2024).  
+It enables real-time monitoring of environmental conditions and remote control of home devices through a mobile application.
 
-The system uses an ESP8266 microcontroller to collect sensor data and send it to a Node.js backend, where data is stored in MongoDB and displayed in a React Native mobile application.
+## System Architecture
+ESP8266 (Hardware) → Node.js REST API → MongoDB  
+                                     ↑  
+                             React Native App  
 
-Technologies Used
-ESP8266 (NodeMCU)
-Node.js & Express.js
-MongoDB
-React Native (Expo)
-REST API
-JWT Authentication
-Features
-Real-time temperature and humidity monitoring
-Gas and water level detection
-Remote LED/device control
-User authentication (JWT)
-Sensor data storage and history
-Mobile application for monitoring and control
-System Architecture
+The system is structured into three layers:
+- **Hardware layer**: ESP8266 collects sensor data and sends it via HTTP
+- **Backend layer**: Node.js API processes data and manages authentication
+- **Mobile layer**: React Native app for monitoring and device control
 
-ESP8266 → Node.js API → MongoDB → React Native App
+## Features
+- Real-time monitoring (temperature, humidity, gas, water level)
+- Remote control of devices (LED/relay)
+- User authentication with JWT
+- Sensor data logging and history
+- Cross-platform mobile interface (Expo)
 
-Project Structure
+## Technologies Used
+- ESP8266 (NodeMCU)
+- Node.js & Express.js
+- MongoDB
+- React Native (Expo)
+- REST API & JWT Authentication
+
+## Project Structure
 SafeNest/
-├── hardware/   → ESP8266 code
-├── api/        → Backend (Node.js)
-├── app/        → Mobile app (React Native)
-Author
+├── hardware/ → ESP8266 firmware
+├── api/ → Backend (Node.js)
+└── app/ → Mobile app (React Native)
 
-Lyna Jbara – IoT Student
+## Authors
+- **Lina Jbara** 
+- **Mohamed Ben Naima** 
+
+---
